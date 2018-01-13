@@ -11,8 +11,6 @@ function distanceTravelledInFeet (origin, destination) {
   return Math.abs(origin - destination) * 264
 }
 
-let x = distanceTravelledInFeet(origin, destination)
-
 function calculatesFarePrice (origin, destination) {
   let x = distanceTravelledInFeet(origin, destination)
   switch (distanceTravelledInFeet(origin, destination)) {
