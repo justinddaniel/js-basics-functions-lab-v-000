@@ -12,15 +12,14 @@ function distanceTravelledInFeet (origin, destination) {
 }
 
 function calculatesFarePrice (origin, destination) {
-  
-  switch (let x = distanceTravelledInFeet(origin, destination)) {
-    case x < 400 :
+  let x = distanceTravelledInFeet(origin, destination);
+    if x <= 400 {
       return 0;
-    case (x >= 400 && x <= 2000) :
+    } else if (x > 400 && x <= 2000) {
       return x * 0.02;
-    case (x > 2000 && x <= 2500) :
+    } else if (x > 2000 && x <= 2500) {
       return x * 25;
-    case x > 2500 :
+    } else {
       return 'cannot travel that far';
+    }
   }
-}
