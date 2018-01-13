@@ -10,3 +10,16 @@ function distanceFromHqInFeet (blocks) {
 function distanceTravelledInFeet (origin, destination) {
   return Math.abs(origin - destination) * 264
 }
+
+let x = distanceTravelledInFeet(origin, destination)
+
+function calculatesFarePrice (origin, destination) {
+  switch (distanceTravelledInFeet(origin, destination)) {
+    case x < 400 :
+      return 0;
+    case 400 <= x < 2000
+      return x * 0.02;
+    default:
+      return x * 25;
+  }
+}
