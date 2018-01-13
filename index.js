@@ -14,6 +14,7 @@ function distanceTravelledInFeet (origin, destination) {
 let x = distanceTravelledInFeet(origin, destination)
 
 function calculatesFarePrice (origin, destination) {
+  let x = distanceTravelledInFeet(origin, destination)
   switch (distanceTravelledInFeet(origin, destination)) {
     case x < 400 :
       return 0;
