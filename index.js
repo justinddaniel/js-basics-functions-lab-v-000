@@ -17,9 +17,11 @@ function calculatesFarePrice (origin, destination) {
   switch (distanceTravelledInFeet(origin, destination)) {
     case x < 400 :
       return 0;
-    case 400 <= x < 2000
+    case (x >= 400 && x <= 2000) :
       return x * 0.02;
-    default:
+    case (x > 2000 && x <= 2500) :
       return x * 25;
+    case x > 2500 :
+      return 'cannot travel that far';
   }
 }
